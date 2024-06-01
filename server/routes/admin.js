@@ -53,7 +53,7 @@ router.post("/admin", async (req, res) => {
     }
     const token = jwt.sign({ userId: user._id }, jwtSecret);
     res.cookie("token", token, { httpOnly: true });
-    res.redirect("/register");
+    res.redirect("/dashboard");
     // res.render("admin/index", { locals, layout: adminLayout });
   } catch (error) {
     console.log(error);
